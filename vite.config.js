@@ -1,18 +1,10 @@
-// https://vitejs.dev/config/
-import {defineConfig} from "vite";
-import { viteSingleFile } from "vite-plugin-singlefile"
+import { defineConfig } from 'vite';
+import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig({
-    build: {
-        chunkSizeWarningLimit: 1600,
-        rollupOptions: {
-            input: {
-                app: 'index.html',
-            },
-        },
-    },
+    plugins: [
+        legacy({
+            targets: ['defaults', 'not IE 11']
+        }),
+    ],
 });
-/*
-<script type="text/javascript" src="/shared/extjs/adapter/ext/ext-base.js"></script>
-<script type="text/javascript" src="/shared/extjs/ext-all-debug.js"></script>
-*/

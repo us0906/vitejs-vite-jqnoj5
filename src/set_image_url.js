@@ -1,0 +1,1 @@
+Ext.BLANK_IMAGE_URL = '/shared/extjs/resources/images/default/s.gif';
